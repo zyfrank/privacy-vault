@@ -24,7 +24,7 @@ You can see example usage in cli.js, works for Kovan:
 1. Add `PRIVATE_KEY` to `.env` file
 1. `./cli.js --help`
 
-Example:
+### Example:
 You can make a ETH deposit
 ```bash
 node cli.js  -r https://kovan.infura.io/v3/97c8bf358b9942a9853fab1ba93dc5b3 deposit  eth 0.000022
