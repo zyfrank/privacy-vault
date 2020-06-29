@@ -1,5 +1,5 @@
 
-Privacy Vault is a non-custodial Ethereum and ERC20 privacy solution based on zkSNARKs. It is inspired by tornardo cash. Currently it is under POC stage and have a node user interface. User can deposit ETH or ERC20 to corresponding privacy vault contract and get a notes which stand for his own privacy vault. After that user can make privacy donation and paymeng by spending his notes. If his spending is less than amount of the privacy vault, he will get a new notes which contain remaining amount. 
+Privacy Vault is a non-custodial Ethereum and ERC20 privacy solution based on zkSNARKs. It is inspired by tornardo cash. Currently it is under POC stage and have a node user interface. User can deposit ETH or ERC20 to corresponding privacy vault contract and get a notes which stand for his own privacy vault. After that user can make privacy donation and payment by spending his notes. If his spending is less than amount of the privacy vault, he will get a new notes which contain remaining amount. 
 
 
 ## Requirements
@@ -13,7 +13,7 @@ You can see example usage in cli.js, it works both in console and in browser.
 Use with command line version. Works for Kovan:
 ### Initialization
 1. `npm install`
-1. `cp .env.example .env` - add your Kovan private key to deploy contracts
+1. `cp .env.example .env` - add your Kovan private key to deploy contracts and make deposit and spend operation
 1. `npm run build:circuit`
 1.  change contract name of generated SpendVerifier.sol to SpendVerifier and change contract name of generated CommitmentVerifier.sol to CommitmentVerifier
 1. `npm run build:contract`
@@ -21,8 +21,8 @@ Use with command line version. Works for Kovan:
 1. change corresponding smart contract address of config.js according to migration result
 
 
-### Kovan, Mainnet
-1. make sure you complete steps from Initialization
+### Kovan
+1. you can make operation after run `npm install` because current repository contain deployed privacy vault contracts or you can deploy your contracts by complete steps from Initialization
 1. Add `PRIVATE_KEY` to `.env` file
 1. `./cli.js --help`
 
