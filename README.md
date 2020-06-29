@@ -56,20 +56,6 @@ You can spend some Dai
  node cli.js  -r https://kovan.infura.io/v3/97c8bf358b9942a9853fab1ba93dc5b3 spend  privacyVault-dai-8.8-42-0x256372a490262dc8dfa2f82364ef15a37adae6283483eb9578ce212f004b2cfff5de44ce7a8d116fa6da3b57f50437e025686e80f2de8ce95f22052a75b10000702760e11f7a0000000000000000000000000000000000000000000000 0x5d410946650c04d5BC236317e54406F3E9C7E77A 3
 ```
 
-## Deploy ETH Tornado Cash
-1. `cp .env.example .env`
-1. Tune all necessary params
-1. `npx truffle migrate --network kovan --reset --f 2 --to 4`
-
-## Deploy ERC20 Tornado Cash
-1. `cp .env.example .env`
-1. Tune all necessary params
-1. `npx truffle migrate --network kovan --reset --f 2 --to 3`
-1. `npx truffle migrate --network kovan --reset --f 5`
-
-**Note**. If you want to reuse the same verifier for all the instances, then after you deployed one of the instances you should only run 4th or 5th migration for ETH or ERC20 contracts respectively (`--f 4 --to 4` or `--f 5`).
-`
-
 ## Credits
 
 Special thanks to tornardo cash team,
