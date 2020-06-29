@@ -204,15 +204,15 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.17+commit.d19bba13\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"uint32\",\"name\":\"_treeLevels\",\"type\":\"uint32\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"constant\":true,\"inputs\":[],\"name\":\"FIELD_SIZE\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"ZERO_VALUE\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"currentRootIndex\",\"outputs\":[{\"internalType\":\"uint32\",\"name\":\"\",\"type\":\"uint32\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"filledSubtrees\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"_left\",\"type\":\"bytes32\"},{\"internalType\":\"bytes32\",\"name\":\"_right\",\"type\":\"bytes32\"}],\"name\":\"hashLeftRight\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"payable\":false,\"stateMutability\":\"pure\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"_root\",\"type\":\"bytes32\"},{\"internalType\":\"uint256\",\"name\":\"_index\",\"type\":\"uint256\"}],\"name\":\"isKnownRoot\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"levels\",\"outputs\":[{\"internalType\":\"uint32\",\"name\":\"\",\"type\":\"uint32\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"nextIndex\",\"outputs\":[{\"internalType\":\"uint32\",\"name\":\"\",\"type\":\"uint32\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"roots\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"zeros\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{\"hashLeftRight(bytes32,bytes32)\":{\"details\":\"Hash 2 tree leaves, returns MiMC(_left, _right)\"},\"isKnownRoot(bytes32,uint256)\":{\"details\":\"Whether the root is present in the root history\"}}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/home/zy/hackathon/tornado-core/contracts/MerkleTreeWithRootHistory.sol\":\"MerkleTreeWithRootHistory\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/zy/hackathon/tornado-core/contracts/MerkleTreeWithRootHistory.sol\":{\"keccak256\":\"0x40bfc3aed6d868330cda6a003043282f6b9b682cbffa6ad6f23c7807099b745e\",\"urls\":[\"bzz-raw://34233fffc729680802033eeab1793fba3f31268ab82278eb631159561cee620d\",\"dweb:/ipfs/QmZthTJUYAGoX2NFR2asnddSqr6E4SmaeyZy7Np5w3KJqE\"]}},\"version\":1}",
-  "bytecode": "0x6080604052600380546001600160401b031916905534801561002057600080fd5b506040516109793803806109798339818101604052602081101561004357600080fd5b505163ffffffff81166100875760405162461bcd60e51b81526004018080602001828103825260278152602001806108f06027913960400191505060405180910390fd5b60208163ffffffff16106100cc5760405162461bcd60e51b81526004018080602001828103825260228152602001806109376022913960400191505060405180910390fd5b6000805463ffffffff191663ffffffff83161781556002805460018181019092557f2fe54c60d3acabf3343a35b6eba15db4821b340f76e741e2249685ed4899af6c6000805160206108af83398151915290910181905581548083018355928290526000805160206109598339815191529092018290555b60005463ffffffff90811690821610156101b25761016b82806001600160e01b036101e616565b6002805460018181019092556000805160206108af833981519152018290558054808201825560008290526000805160206109598339815191520182905590925001610144565b5060046101c882806001600160e01b036101e616565b81546001810183556000928352602090922090910155506103c79050565b6000600080516020610917833981519152831061024a576040805162461bcd60e51b815260206004820181905260248201527f5f6c6566742073686f756c6420626520696e7369646520746865206669656c64604482015290519081900360640190fd5b60008051602061091783398151915282106102965760405162461bcd60e51b81526004018080602001828103825260218152602001806108cf6021913960400191505060405180910390fd5b6040805163f47d33b560e01b81526004810185905260006024820181905282518693919273__Hasher________________________________9263f47d33b592604480840193829003018186803b1580156102f057600080fd5b505af4158015610304573d6000803e3d6000fd5b505050506040513d604081101561031a57600080fd5b5080516020909101519092509050600080516020610917833981519152848308915073__Hasher________________________________63f47d33b583836040518363ffffffff1660e01b81526004018083815260200182815260200192505050604080518083038186803b15801561039257600080fd5b505af41580156103a6573d6000803e3d6000fd5b505050506040513d60408110156103bc57600080fd5b505195945050505050565b6104d9806103d66000396000f3fe608060405234801561001057600080fd5b506004361061009e5760003560e01c8063c2b40ae411610066578063c2b40ae414610140578063e82955881461015d578063ec7329591461017a578063f178e47c14610182578063fc7e9c6f1461019f5761009e565b806338bf282e146100a3578063414a37ba146100d85780634ecf518b146100e0578063876cf0c41461010157806390eeb02b14610138575b600080fd5b6100c6600480360360408110156100b957600080fd5b50803590602001356101a7565b60408051918252519081900360200190f35b6100c661038a565b6100e861039c565b6040805163ffffffff9092168252519081900360200190f35b6101246004803603604081101561011757600080fd5b50803590602001356103a8565b604080519115158252519081900360200190f35b6100e86103e7565b6100c66004803603602081101561015657600080fd5b50356103f3565b6100c66004803603602081101561017357600080fd5b5035610411565b6100c661041e565b6100c66004803603602081101561019857600080fd5b5035610442565b6100e861044f565b6000600080516020610485833981519152831061020b576040805162461bcd60e51b815260206004820181905260248201527f5f6c6566742073686f756c6420626520696e7369646520746865206669656c64604482015290519081900360640190fd5b60008051602061048583398151915282106102575760405162461bcd60e51b81526004018080602001828103825260218152602001806104646021913960400191505060405180910390fd5b6040805163f47d33b560e01b81526004810185905260006024820181905282518693919273__Hasher________________________________9263f47d33b592604480840193829003018186803b1580156102b157600080fd5b505af41580156102c5573d6000803e3d6000fd5b505050506040513d60408110156102db57600080fd5b5080516020909101519092509050600080516020610485833981519152848308915073__Hasher________________________________63f47d33b583836040518363ffffffff1660e01b81526004018083815260200182815260200192505050604080518083038186803b15801561035357600080fd5b505af4158015610367573d6000803e3d6000fd5b505050506040513d604081101561037d57600080fd5b5051925050505b92915050565b60008051602061048583398151915281565b60005463ffffffff1681565b6000826103b757506000610384565b82600483815481106103c557fe5b906000526020600020015414156103de57506001610384565b50600092915050565b60035463ffffffff1681565b6004818154811061040057fe5b600091825260209091200154905081565b6002818154811061040057fe5b7f2fe54c60d3acabf3343a35b6eba15db4821b340f76e741e2249685ed4899af6c81565b6001818154811061040057fe5b600354640100000000900463ffffffff168156fe5f72696768742073686f756c6420626520696e7369646520746865206669656c6430644e72e131a029b85045b68181585d2833e84879b9709143e1f593f0000001a265627a7a7231582000e87a8273fd841dad74e57273a93fd78814c9ffee5b0a0c3e30aeb58f287e8564736f6c63430005110032405787fa12a823e0f2b7631cc41b3ba8828b3321ca811111fa75cd3aa3bb5ace5f72696768742073686f756c6420626520696e7369646520746865206669656c645f747265654c6576656c732073686f756c642062652067726561746572207468616e207a65726f30644e72e131a029b85045b68181585d2833e84879b9709143e1f593f00000015f747265654c6576656c732073686f756c64206265206c657373207468616e203332b10e2d527612073b26eecdfd717e6a320cf44b4afac2b0732d9fcbe2b7fa0cf6",
-  "deployedBytecode": "0x608060405234801561001057600080fd5b506004361061009e5760003560e01c8063c2b40ae411610066578063c2b40ae414610140578063e82955881461015d578063ec7329591461017a578063f178e47c14610182578063fc7e9c6f1461019f5761009e565b806338bf282e146100a3578063414a37ba146100d85780634ecf518b146100e0578063876cf0c41461010157806390eeb02b14610138575b600080fd5b6100c6600480360360408110156100b957600080fd5b50803590602001356101a7565b60408051918252519081900360200190f35b6100c661038a565b6100e861039c565b6040805163ffffffff9092168252519081900360200190f35b6101246004803603604081101561011757600080fd5b50803590602001356103a8565b604080519115158252519081900360200190f35b6100e86103e7565b6100c66004803603602081101561015657600080fd5b50356103f3565b6100c66004803603602081101561017357600080fd5b5035610411565b6100c661041e565b6100c66004803603602081101561019857600080fd5b5035610442565b6100e861044f565b6000600080516020610485833981519152831061020b576040805162461bcd60e51b815260206004820181905260248201527f5f6c6566742073686f756c6420626520696e7369646520746865206669656c64604482015290519081900360640190fd5b60008051602061048583398151915282106102575760405162461bcd60e51b81526004018080602001828103825260218152602001806104646021913960400191505060405180910390fd5b6040805163f47d33b560e01b81526004810185905260006024820181905282518693919273__Hasher________________________________9263f47d33b592604480840193829003018186803b1580156102b157600080fd5b505af41580156102c5573d6000803e3d6000fd5b505050506040513d60408110156102db57600080fd5b5080516020909101519092509050600080516020610485833981519152848308915073__Hasher________________________________63f47d33b583836040518363ffffffff1660e01b81526004018083815260200182815260200192505050604080518083038186803b15801561035357600080fd5b505af4158015610367573d6000803e3d6000fd5b505050506040513d604081101561037d57600080fd5b5051925050505b92915050565b60008051602061048583398151915281565b60005463ffffffff1681565b6000826103b757506000610384565b82600483815481106103c557fe5b906000526020600020015414156103de57506001610384565b50600092915050565b60035463ffffffff1681565b6004818154811061040057fe5b600091825260209091200154905081565b6002818154811061040057fe5b7f2fe54c60d3acabf3343a35b6eba15db4821b340f76e741e2249685ed4899af6c81565b6001818154811061040057fe5b600354640100000000900463ffffffff168156fe5f72696768742073686f756c6420626520696e7369646520746865206669656c6430644e72e131a029b85045b68181585d2833e84879b9709143e1f593f0000001a265627a7a7231582000e87a8273fd841dad74e57273a93fd78814c9ffee5b0a0c3e30aeb58f287e8564736f6c63430005110032",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.17+commit.d19bba13\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"uint32\",\"name\":\"_treeLevels\",\"type\":\"uint32\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"constant\":true,\"inputs\":[],\"name\":\"FIELD_SIZE\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"ZERO_VALUE\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"currentRootIndex\",\"outputs\":[{\"internalType\":\"uint32\",\"name\":\"\",\"type\":\"uint32\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"filledSubtrees\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"_left\",\"type\":\"bytes32\"},{\"internalType\":\"bytes32\",\"name\":\"_right\",\"type\":\"bytes32\"}],\"name\":\"hashLeftRight\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"payable\":false,\"stateMutability\":\"pure\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"_root\",\"type\":\"bytes32\"},{\"internalType\":\"uint256\",\"name\":\"_index\",\"type\":\"uint256\"}],\"name\":\"isKnownRoot\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"levels\",\"outputs\":[{\"internalType\":\"uint32\",\"name\":\"\",\"type\":\"uint32\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"nextIndex\",\"outputs\":[{\"internalType\":\"uint32\",\"name\":\"\",\"type\":\"uint32\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"roots\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"zeros\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{\"hashLeftRight(bytes32,bytes32)\":{\"details\":\"Hash 2 tree leaves, returns MiMC(_left, _right)\"},\"isKnownRoot(bytes32,uint256)\":{\"details\":\"Whether the root is present in the root history\"}}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/home/zy/privacy-vault/contracts/MerkleTreeWithRootHistory.sol\":\"MerkleTreeWithRootHistory\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/zy/privacy-vault/contracts/MerkleTreeWithRootHistory.sol\":{\"keccak256\":\"0x40bfc3aed6d868330cda6a003043282f6b9b682cbffa6ad6f23c7807099b745e\",\"urls\":[\"bzz-raw://34233fffc729680802033eeab1793fba3f31268ab82278eb631159561cee620d\",\"dweb:/ipfs/QmZthTJUYAGoX2NFR2asnddSqr6E4SmaeyZy7Np5w3KJqE\"]}},\"version\":1}",
+  "bytecode": "0x6080604052600380546001600160401b031916905534801561002057600080fd5b506040516109793803806109798339818101604052602081101561004357600080fd5b505163ffffffff81166100875760405162461bcd60e51b81526004018080602001828103825260278152602001806108f06027913960400191505060405180910390fd5b60208163ffffffff16106100cc5760405162461bcd60e51b81526004018080602001828103825260228152602001806109376022913960400191505060405180910390fd5b6000805463ffffffff191663ffffffff83161781556002805460018181019092557f2fe54c60d3acabf3343a35b6eba15db4821b340f76e741e2249685ed4899af6c6000805160206108af83398151915290910181905581548083018355928290526000805160206109598339815191529092018290555b60005463ffffffff90811690821610156101b25761016b82806001600160e01b036101e616565b6002805460018181019092556000805160206108af833981519152018290558054808201825560008290526000805160206109598339815191520182905590925001610144565b5060046101c882806001600160e01b036101e616565b81546001810183556000928352602090922090910155506103c79050565b6000600080516020610917833981519152831061024a576040805162461bcd60e51b815260206004820181905260248201527f5f6c6566742073686f756c6420626520696e7369646520746865206669656c64604482015290519081900360640190fd5b60008051602061091783398151915282106102965760405162461bcd60e51b81526004018080602001828103825260218152602001806108cf6021913960400191505060405180910390fd5b6040805163f47d33b560e01b81526004810185905260006024820181905282518693919273__Hasher________________________________9263f47d33b592604480840193829003018186803b1580156102f057600080fd5b505af4158015610304573d6000803e3d6000fd5b505050506040513d604081101561031a57600080fd5b5080516020909101519092509050600080516020610917833981519152848308915073__Hasher________________________________63f47d33b583836040518363ffffffff1660e01b81526004018083815260200182815260200192505050604080518083038186803b15801561039257600080fd5b505af41580156103a6573d6000803e3d6000fd5b505050506040513d60408110156103bc57600080fd5b505195945050505050565b6104d9806103d66000396000f3fe608060405234801561001057600080fd5b506004361061009e5760003560e01c8063c2b40ae411610066578063c2b40ae414610140578063e82955881461015d578063ec7329591461017a578063f178e47c14610182578063fc7e9c6f1461019f5761009e565b806338bf282e146100a3578063414a37ba146100d85780634ecf518b146100e0578063876cf0c41461010157806390eeb02b14610138575b600080fd5b6100c6600480360360408110156100b957600080fd5b50803590602001356101a7565b60408051918252519081900360200190f35b6100c661038a565b6100e861039c565b6040805163ffffffff9092168252519081900360200190f35b6101246004803603604081101561011757600080fd5b50803590602001356103a8565b604080519115158252519081900360200190f35b6100e86103e7565b6100c66004803603602081101561015657600080fd5b50356103f3565b6100c66004803603602081101561017357600080fd5b5035610411565b6100c661041e565b6100c66004803603602081101561019857600080fd5b5035610442565b6100e861044f565b6000600080516020610485833981519152831061020b576040805162461bcd60e51b815260206004820181905260248201527f5f6c6566742073686f756c6420626520696e7369646520746865206669656c64604482015290519081900360640190fd5b60008051602061048583398151915282106102575760405162461bcd60e51b81526004018080602001828103825260218152602001806104646021913960400191505060405180910390fd5b6040805163f47d33b560e01b81526004810185905260006024820181905282518693919273__Hasher________________________________9263f47d33b592604480840193829003018186803b1580156102b157600080fd5b505af41580156102c5573d6000803e3d6000fd5b505050506040513d60408110156102db57600080fd5b5080516020909101519092509050600080516020610485833981519152848308915073__Hasher________________________________63f47d33b583836040518363ffffffff1660e01b81526004018083815260200182815260200192505050604080518083038186803b15801561035357600080fd5b505af4158015610367573d6000803e3d6000fd5b505050506040513d604081101561037d57600080fd5b5051925050505b92915050565b60008051602061048583398151915281565b60005463ffffffff1681565b6000826103b757506000610384565b82600483815481106103c557fe5b906000526020600020015414156103de57506001610384565b50600092915050565b60035463ffffffff1681565b6004818154811061040057fe5b600091825260209091200154905081565b6002818154811061040057fe5b7f2fe54c60d3acabf3343a35b6eba15db4821b340f76e741e2249685ed4899af6c81565b6001818154811061040057fe5b600354640100000000900463ffffffff168156fe5f72696768742073686f756c6420626520696e7369646520746865206669656c6430644e72e131a029b85045b68181585d2833e84879b9709143e1f593f0000001a265627a7a72315820e50fabcbb30c9e9fc71932dcf8579155e479a1db7950c780e9b2549150b2b7aa64736f6c63430005110032405787fa12a823e0f2b7631cc41b3ba8828b3321ca811111fa75cd3aa3bb5ace5f72696768742073686f756c6420626520696e7369646520746865206669656c645f747265654c6576656c732073686f756c642062652067726561746572207468616e207a65726f30644e72e131a029b85045b68181585d2833e84879b9709143e1f593f00000015f747265654c6576656c732073686f756c64206265206c657373207468616e203332b10e2d527612073b26eecdfd717e6a320cf44b4afac2b0732d9fcbe2b7fa0cf6",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b506004361061009e5760003560e01c8063c2b40ae411610066578063c2b40ae414610140578063e82955881461015d578063ec7329591461017a578063f178e47c14610182578063fc7e9c6f1461019f5761009e565b806338bf282e146100a3578063414a37ba146100d85780634ecf518b146100e0578063876cf0c41461010157806390eeb02b14610138575b600080fd5b6100c6600480360360408110156100b957600080fd5b50803590602001356101a7565b60408051918252519081900360200190f35b6100c661038a565b6100e861039c565b6040805163ffffffff9092168252519081900360200190f35b6101246004803603604081101561011757600080fd5b50803590602001356103a8565b604080519115158252519081900360200190f35b6100e86103e7565b6100c66004803603602081101561015657600080fd5b50356103f3565b6100c66004803603602081101561017357600080fd5b5035610411565b6100c661041e565b6100c66004803603602081101561019857600080fd5b5035610442565b6100e861044f565b6000600080516020610485833981519152831061020b576040805162461bcd60e51b815260206004820181905260248201527f5f6c6566742073686f756c6420626520696e7369646520746865206669656c64604482015290519081900360640190fd5b60008051602061048583398151915282106102575760405162461bcd60e51b81526004018080602001828103825260218152602001806104646021913960400191505060405180910390fd5b6040805163f47d33b560e01b81526004810185905260006024820181905282518693919273__Hasher________________________________9263f47d33b592604480840193829003018186803b1580156102b157600080fd5b505af41580156102c5573d6000803e3d6000fd5b505050506040513d60408110156102db57600080fd5b5080516020909101519092509050600080516020610485833981519152848308915073__Hasher________________________________63f47d33b583836040518363ffffffff1660e01b81526004018083815260200182815260200192505050604080518083038186803b15801561035357600080fd5b505af4158015610367573d6000803e3d6000fd5b505050506040513d604081101561037d57600080fd5b5051925050505b92915050565b60008051602061048583398151915281565b60005463ffffffff1681565b6000826103b757506000610384565b82600483815481106103c557fe5b906000526020600020015414156103de57506001610384565b50600092915050565b60035463ffffffff1681565b6004818154811061040057fe5b600091825260209091200154905081565b6002818154811061040057fe5b7f2fe54c60d3acabf3343a35b6eba15db4821b340f76e741e2249685ed4899af6c81565b6001818154811061040057fe5b600354640100000000900463ffffffff168156fe5f72696768742073686f756c6420626520696e7369646520746865206669656c6430644e72e131a029b85045b68181585d2833e84879b9709143e1f593f0000001a265627a7a72315820e50fabcbb30c9e9fc71932dcf8579155e479a1db7950c780e9b2549150b2b7aa64736f6c63430005110032",
   "sourceMap": "898:2766:3:-;;;1434:34;;;-1:-1:-1;;;;;;1472:27:3;;;1530:566;5:2:-1;;;;30:1;27;20:12;5:2;1530:566:3;;;;;;;;;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;1530:566:3;1583:15;;;1575:67;;;;-1:-1:-1;;;1575:67:3;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1670:2;1656:11;:16;;;1648:63;;;;-1:-1:-1;;;1648:63:3;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1717:6;:20;;-1:-1:-1;;1717:20:3;;;;;;;1791:5;27:10:-1;;-1:-1;23:18;;;45:23;;;1092:77:3;-1:-1:-1;;;;;;;;;;;1791:23:3;;;;;;27:10:-1;;23:18;;;45:23;;1820:32:3;;;;-1:-1:-1;;;;;;;;;;;1820:32:3;;;;;;1859:175;1882:6;;;;;;1878:10;;;;1859:175;;;1917:39;1931:11;;-1:-1:-1;;;;;1917:13:3;:39;:::i;:::-;1964:5;27:10:-1;;39:1;23:18;;;45:23;;;-1:-1;;;;;;;;;;;1964:23:3;;;;27:10:-1;;23:18;;;45:23;;-1:-1;1995:32:3;;;-1:-1:-1;;;;;;;;;;;1995:32:3;;;;1903:53;;-1:-1:-1;1890:3:3;1859:175;;;-1:-1:-1;2040:5:3;2051:39;2065:11;;-1:-1:-1;;;;;2051:13:3;:39;:::i;:::-;27:10:-1;;39:1;23:18;;45:23;;-1:-1;2040:51:3;;;;;;;;;;;-1:-1:-1;898:2766:3;;-1:-1:-1;898:2766:3;2168:445;2243:7;-1:-1:-1;;;;;;;;;;;2266:27:3;;2258:72;;;;;-1:-1:-1;;;2258:72:3;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;;;;;;;;;2344:28:3;;2336:74;;;;-1:-1:-1;;;2336:74:3;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2476:23;;;-1:-1:-1;;;2476:23:3;;;;;;;;2416:9;2476:23;;;;;;;;2436:5;;2416:9;;2476:6;;:17;;:23;;;;;;;;;;:6;:23;;;5:2:-1;;;;30:1;27;20:12;5:2;2476:23:3;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;2476:23:3;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;2476:23:3;;;;;;;;;-1:-1:-1;2476:23:3;-1:-1:-1;;;;;;;;;;;;2527:6:3;2516:1;2509:38;2505:42;;2562:6;:17;2580:1;2583;2562:23;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;2562:23:3;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;2562:23:3;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;2562:23:3;;2168:445;-1:-1:-1;;;;;2168:445:3:o;898:2766::-;;;;;;;",
   "deployedSourceMap": "898:2766:3:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;898:2766:3;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2168:445;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;2168:445:3;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;937:114;;;:::i;1213:20::-;;;:::i;:::-;;;;;;;;;;;;;;;;;;;3456:205;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;3456:205:3;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;1434:34;;;:::i;1503:22::-;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;1503:22:3;;:::i;1408:::-;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;1408:22:3;;:::i;1055:114::-;;;:::i;1373:31::-;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;1373:31:3;;:::i;1472:27::-;;;:::i;2168:445::-;2243:7;-1:-1:-1;;;;;;;;;;;2266:27:3;;2258:72;;;;;-1:-1:-1;;;2258:72:3;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;;;;;;;;;2344:28:3;;2336:74;;;;-1:-1:-1;;;2336:74:3;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2476:23;;;-1:-1:-1;;;2476:23:3;;;;;;;;2416:9;2476:23;;;;;;;;2436:5;;2416:9;;2476:6;;:17;;:23;;;;;;;;;;:6;:23;;;5:2:-1;;;;30:1;27;20:12;5:2;2476:23:3;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;2476:23:3;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;2476:23:3;;;;;;;;;-1:-1:-1;2476:23:3;-1:-1:-1;;;;;;;;;;;;2527:6:3;2516:1;2509:38;2505:42;;2562:6;:17;2580:1;2583;2562:23;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;2562:23:3;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;2562:23:3;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;2562:23:3;;-1:-1:-1;;;2168:445:3;;;;;:::o;937:114::-;-1:-1:-1;;;;;;;;;;;937:114:3;:::o;1213:20::-;;;;;;:::o;3456:205::-;3525:4;3541:10;3537:43;;-1:-1:-1;3568:5:3;3561:12;;3537:43;3606:5;3589;3595:6;3589:13;;;;;;;;;;;;;;;;:22;3585:54;;;-1:-1:-1;3628:4:3;3621:11;;3585:54;-1:-1:-1;3651:5:3;3456:205;;;;:::o;1434:34::-;;;;;;:::o;1503:22::-;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;1503:22:3;:::o;1408:::-;;;;;;;;;;1055:114;1092:77;1055:114;:::o;1373:31::-;;;;;;;;;;1472:27;;;;;;;;;:::o",
   "source": "// https://tornado.cash\n/*\n* d888888P                                           dP              a88888b.                   dP\n*    88                                              88             d8'   `88                   88\n*    88    .d8888b. 88d888b. 88d888b. .d8888b. .d888b88 .d8888b.    88        .d8888b. .d8888b. 88d888b.\n*    88    88'  `88 88'  `88 88'  `88 88'  `88 88'  `88 88'  `88    88        88'  `88 Y8ooooo. 88'  `88\n*    88    88.  .88 88       88    88 88.  .88 88.  .88 88.  .88 dP Y8.   .88 88.  .88       88 88    88\n*    dP    `88888P' dP       dP    dP `88888P8 `88888P8 `88888P' 88  Y88888P' `88888P8 `88888P' dP    dP\n* ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo\n*/\n\npragma solidity 0.5.17;\n\nlibrary Hasher {\n  function MiMCSponge(uint256 in_xL, uint256 in_xR) public pure returns (uint256 xL, uint256 xR);\n}\n\ncontract MerkleTreeWithRootHistory {\n  uint256 public constant FIELD_SIZE = 21888242871839275222246405745257275088548364400416034343698204186575808495617;\n  uint256 public constant ZERO_VALUE = 21663839004416932945382355908790599225266501822907911457504978515578255421292; // = keccak256(\"tornado\") % FIELD_SIZE\n\n  uint32 public levels;\n\n  // the following variables are made public for easier testing and debugging and\n  // are not supposed to be accessed in regular code\n  bytes32[] public filledSubtrees;\n  bytes32[] public zeros;\n  uint32 public currentRootIndex = 0;\n  uint32 public nextIndex = 0;\n  bytes32[] public roots;\n\n  constructor(uint32 _treeLevels) public {\n    require(_treeLevels > 0, \"_treeLevels should be greater than zero\");\n    require(_treeLevels < 32, \"_treeLevels should be less than 32\");\n    levels = _treeLevels;\n\n    bytes32 currentZero = bytes32(ZERO_VALUE);\n    zeros.push(currentZero);\n    filledSubtrees.push(currentZero);\n\n    for (uint32 i = 1; i < levels; i++) {\n      currentZero = hashLeftRight(currentZero, currentZero);\n      zeros.push(currentZero);\n      filledSubtrees.push(currentZero);\n    }\n\n    roots.push(hashLeftRight(currentZero, currentZero));\n  }\n\n  /**\n    @dev Hash 2 tree leaves, returns MiMC(_left, _right)\n  */\n  function hashLeftRight(bytes32 _left, bytes32 _right) public pure returns (bytes32) {\n    require(uint256(_left) < FIELD_SIZE, \"_left should be inside the field\");\n    require(uint256(_right) < FIELD_SIZE, \"_right should be inside the field\");\n    uint256 R = uint256(_left);\n    uint256 C = 0;\n    (R, C) = Hasher.MiMCSponge(R, C);\n    R = addmod(R, uint256(_right), FIELD_SIZE);\n    (R, C) = Hasher.MiMCSponge(R, C);\n    return bytes32(R);\n  }\n\n  function _insert(bytes32 _leaf) internal returns(uint32 index) {\n    uint32 currentIndex = nextIndex;\n    require(currentIndex != uint32(2)**levels, \"Merkle tree is full. No more leafs can be added\");\n    nextIndex += 1;\n    bytes32 currentLevelHash = _leaf;\n    bytes32 left;\n    bytes32 right;\n\n    for (uint32 i = 0; i < levels; i++) {\n      if (currentIndex % 2 == 0) {\n        left = currentLevelHash;\n        right = zeros[i];\n\n        filledSubtrees[i] = currentLevelHash;\n      } else {\n        left = filledSubtrees[i];\n        right = currentLevelHash;\n      }\n\n      currentLevelHash = hashLeftRight(left, right);\n\n      currentIndex /= 2;\n    }\n\n    currentRootIndex = currentRootIndex + 1 ;\n    roots.push(currentLevelHash);\n    return nextIndex - 1;\n  }\n\n  /**\n    @dev Whether the root is present in the root history\n  */\n  function isKnownRoot(bytes32 _root, uint _index) public view returns(bool) {\n    if (_root == 0) {\n      return false;\n    }\n    if (roots[_index] == _root) {\n      return true;\n    }\n    return false;\n  }\n\n}\n",
-  "sourcePath": "/home/zy/hackathon/tornado-core/contracts/MerkleTreeWithRootHistory.sol",
+  "sourcePath": "/home/zy/privacy-vault/contracts/MerkleTreeWithRootHistory.sol",
   "ast": {
-    "absolutePath": "/home/zy/hackathon/tornado-core/contracts/MerkleTreeWithRootHistory.sol",
+    "absolutePath": "/home/zy/privacy-vault/contracts/MerkleTreeWithRootHistory.sol",
     "exportedSymbols": {
       "Hasher": [
         1274
@@ -797,10 +797,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        4222,
-                        4223
+                        4220,
+                        4221
                       ],
-                      "referencedDeclaration": 4223,
+                      "referencedDeclaration": 4221,
                       "src": "1575:7:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -913,10 +913,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        4222,
-                        4223
+                        4220,
+                        4221
                       ],
-                      "referencedDeclaration": 4223,
+                      "referencedDeclaration": 4221,
                       "src": "1648:7:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -1902,10 +1902,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        4222,
-                        4223
+                        4220,
+                        4221
                       ],
-                      "referencedDeclaration": 4223,
+                      "referencedDeclaration": 4221,
                       "src": "2258:7:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -2051,10 +2051,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        4222,
-                        4223
+                        4220,
+                        4221
                       ],
-                      "referencedDeclaration": 4223,
+                      "referencedDeclaration": 4221,
                       "src": "2336:7:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -2488,7 +2488,7 @@
                         "name": "addmod",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 4207,
+                        "referencedDeclaration": 4205,
                         "src": "2509:6:3",
                         "typeDescriptions": {
                           "typeIdentifier": "t_function_addmod_pure$_t_uint256_$_t_uint256_$_t_uint256_$returns$_t_uint256_$",
@@ -3041,10 +3041,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        4222,
-                        4223
+                        4220,
+                        4221
                       ],
-                      "referencedDeclaration": 4223,
+                      "referencedDeclaration": 4221,
                       "src": "2723:7:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -4586,7 +4586,7 @@
     "src": "755:2910:3"
   },
   "legacyAST": {
-    "absolutePath": "/home/zy/hackathon/tornado-core/contracts/MerkleTreeWithRootHistory.sol",
+    "absolutePath": "/home/zy/privacy-vault/contracts/MerkleTreeWithRootHistory.sol",
     "exportedSymbols": {
       "Hasher": [
         1274
@@ -5171,10 +5171,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        4222,
-                        4223
+                        4220,
+                        4221
                       ],
-                      "referencedDeclaration": 4223,
+                      "referencedDeclaration": 4221,
                       "src": "1575:7:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -5287,10 +5287,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        4222,
-                        4223
+                        4220,
+                        4221
                       ],
-                      "referencedDeclaration": 4223,
+                      "referencedDeclaration": 4221,
                       "src": "1648:7:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -6276,10 +6276,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        4222,
-                        4223
+                        4220,
+                        4221
                       ],
-                      "referencedDeclaration": 4223,
+                      "referencedDeclaration": 4221,
                       "src": "2258:7:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -6425,10 +6425,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        4222,
-                        4223
+                        4220,
+                        4221
                       ],
-                      "referencedDeclaration": 4223,
+                      "referencedDeclaration": 4221,
                       "src": "2336:7:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -6862,7 +6862,7 @@
                         "name": "addmod",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 4207,
+                        "referencedDeclaration": 4205,
                         "src": "2509:6:3",
                         "typeDescriptions": {
                           "typeIdentifier": "t_function_addmod_pure$_t_uint256_$_t_uint256_$_t_uint256_$returns$_t_uint256_$",
@@ -7415,10 +7415,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        4222,
-                        4223
+                        4220,
+                        4221
                       ],
-                      "referencedDeclaration": 4223,
+                      "referencedDeclaration": 4221,
                       "src": "2723:7:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -8964,8 +8964,8 @@
     "version": "0.5.17+commit.d19bba13.Emscripten.clang"
   },
   "networks": {},
-  "schemaVersion": "3.0.18",
-  "updatedAt": "2020-06-29T02:58:09.435Z",
+  "schemaVersion": "3.2.0",
+  "updatedAt": "2020-06-29T09:48:59.470Z",
   "devdoc": {
     "methods": {
       "hashLeftRight(bytes32,bytes32)": {

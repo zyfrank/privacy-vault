@@ -98,15 +98,15 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.17+commit.d19bba13\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"value\",\"type\":\"uint256\"}],\"name\":\"Transfer\",\"type\":\"event\"},{\"constant\":true,\"inputs\":[],\"name\":\"_totalSupply\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"address\",\"name\":\"who\",\"type\":\"address\"}],\"name\":\"balanceOf\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"totalSupply\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"value\",\"type\":\"uint256\"}],\"name\":\"transfer\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/home/zy/hackathon/tornado-core/contracts/Mocks/IUSDT.sol\":\"ERC20Basic\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/zy/hackathon/tornado-core/contracts/Mocks/IUSDT.sol\":{\"keccak256\":\"0x635f010bb5c012b9ef4fa5036ef37fd314ba7935b90380b08eb8728801f1e247\",\"urls\":[\"bzz-raw://70c1cad94a0fb97b086eef4520fcfaf466fa94c88e42349baeecd54ba94711b2\",\"dweb:/ipfs/QmX1mtq92yFHGoBHXQHjZhwT7mhLy6CqRDxCaFAu6AaAF6\"]}},\"version\":1}",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.17+commit.d19bba13\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"value\",\"type\":\"uint256\"}],\"name\":\"Transfer\",\"type\":\"event\"},{\"constant\":true,\"inputs\":[],\"name\":\"_totalSupply\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"address\",\"name\":\"who\",\"type\":\"address\"}],\"name\":\"balanceOf\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"totalSupply\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"value\",\"type\":\"uint256\"}],\"name\":\"transfer\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/home/zy/privacy-vault/contracts/Mocks/IUSDT.sol\":\"ERC20Basic\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/zy/privacy-vault/contracts/Mocks/IUSDT.sol\":{\"keccak256\":\"0x635f010bb5c012b9ef4fa5036ef37fd314ba7935b90380b08eb8728801f1e247\",\"urls\":[\"bzz-raw://70c1cad94a0fb97b086eef4520fcfaf466fa94c88e42349baeecd54ba94711b2\",\"dweb:/ipfs/QmX1mtq92yFHGoBHXQHjZhwT7mhLy6CqRDxCaFAu6AaAF6\"]}},\"version\":1}",
   "bytecode": "0x",
   "deployedBytecode": "0x",
   "sourceMap": "",
   "deployedSourceMap": "",
   "source": "pragma solidity 0.5.17;\n\ncontract ERC20Basic {\n    uint public _totalSupply;\n    function totalSupply() public view returns (uint);\n    function balanceOf(address who) public view returns (uint);\n    function transfer(address to, uint value) public;\n    event Transfer(address indexed from, address indexed to, uint value);\n}\n\n/**\n * @title ERC20 interface\n * @dev see https://github.com/ethereum/EIPs/issues/20\n */\ncontract IUSDT is ERC20Basic {\n    function allowance(address owner, address spender) public view returns (uint);\n    function transferFrom(address from, address to, uint value) public;\n    function approve(address spender, uint value) public;\n    event Approval(address indexed owner, address indexed spender, uint value);\n}\n",
-  "sourcePath": "/home/zy/hackathon/tornado-core/contracts/Mocks/IUSDT.sol",
+  "sourcePath": "/home/zy/privacy-vault/contracts/Mocks/IUSDT.sol",
   "ast": {
-    "absolutePath": "/home/zy/hackathon/tornado-core/contracts/Mocks/IUSDT.sol",
+    "absolutePath": "/home/zy/privacy-vault/contracts/Mocks/IUSDT.sol",
     "exportedSymbols": {
       "ERC20Basic": [
         1710
@@ -925,7 +925,7 @@
     "src": "0:742:7"
   },
   "legacyAST": {
-    "absolutePath": "/home/zy/hackathon/tornado-core/contracts/Mocks/IUSDT.sol",
+    "absolutePath": "/home/zy/privacy-vault/contracts/Mocks/IUSDT.sol",
     "exportedSymbols": {
       "ERC20Basic": [
         1710
@@ -1748,8 +1748,8 @@
     "version": "0.5.17+commit.d19bba13.Emscripten.clang"
   },
   "networks": {},
-  "schemaVersion": "3.0.18",
-  "updatedAt": "2020-06-29T02:58:09.440Z",
+  "schemaVersion": "3.2.0",
+  "updatedAt": "2020-06-29T09:48:59.475Z",
   "devdoc": {
     "methods": {}
   },

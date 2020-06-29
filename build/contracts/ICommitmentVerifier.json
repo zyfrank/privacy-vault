@@ -28,15 +28,15 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.17+commit.d19bba13\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[{\"internalType\":\"bytes\",\"name\":\"_proof\",\"type\":\"bytes\"},{\"internalType\":\"uint256[2]\",\"name\":\"_input\",\"type\":\"uint256[2]\"}],\"name\":\"verifyProof\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/home/zy/hackathon/tornado-core/contracts/PrivacyVault.sol\":\"ICommitmentVerifier\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/zy/hackathon/tornado-core/contracts/MerkleTreeWithRootHistory.sol\":{\"keccak256\":\"0x40bfc3aed6d868330cda6a003043282f6b9b682cbffa6ad6f23c7807099b745e\",\"urls\":[\"bzz-raw://34233fffc729680802033eeab1793fba3f31268ab82278eb631159561cee620d\",\"dweb:/ipfs/QmZthTJUYAGoX2NFR2asnddSqr6E4SmaeyZy7Np5w3KJqE\"]},\"/home/zy/hackathon/tornado-core/contracts/PrivacyVault.sol\":{\"keccak256\":\"0x46e6365c7e176a305bb87fff05203024339d977de770cb960d8af4d6b6c2fe58\",\"urls\":[\"bzz-raw://dc8b96dd43d2fb68bcd600e8aa2a0bc49a151d31ccde9bf8f34512f1eea377bb\",\"dweb:/ipfs/QmWFJQUdw5XGFPHrMjQHquoBTpq1gq6zuByYm73mexmyFA\"]},\"@openzeppelin/contracts/utils/ReentrancyGuard.sol\":{\"keccak256\":\"0xe86fdc15fbc379ecf14d6aa4f51b87c0be8476e114e23c171b790a6717230655\",\"urls\":[\"bzz-raw://81905037f66d37ed211a4e3430af74f36e18b3a5d5b688e6d7d5ee199824a41a\",\"dweb:/ipfs/QmTcpgNKqLVRbcgNSUHazAbVf2bz5uh5mPkAijGeYW7Sqb\"]}},\"version\":1}",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.17+commit.d19bba13\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[{\"internalType\":\"bytes\",\"name\":\"_proof\",\"type\":\"bytes\"},{\"internalType\":\"uint256[2]\",\"name\":\"_input\",\"type\":\"uint256[2]\"}],\"name\":\"verifyProof\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/home/zy/privacy-vault/contracts/PrivacyVault.sol\":\"ICommitmentVerifier\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/zy/privacy-vault/contracts/MerkleTreeWithRootHistory.sol\":{\"keccak256\":\"0x40bfc3aed6d868330cda6a003043282f6b9b682cbffa6ad6f23c7807099b745e\",\"urls\":[\"bzz-raw://34233fffc729680802033eeab1793fba3f31268ab82278eb631159561cee620d\",\"dweb:/ipfs/QmZthTJUYAGoX2NFR2asnddSqr6E4SmaeyZy7Np5w3KJqE\"]},\"/home/zy/privacy-vault/contracts/PrivacyVault.sol\":{\"keccak256\":\"0x46e6365c7e176a305bb87fff05203024339d977de770cb960d8af4d6b6c2fe58\",\"urls\":[\"bzz-raw://dc8b96dd43d2fb68bcd600e8aa2a0bc49a151d31ccde9bf8f34512f1eea377bb\",\"dweb:/ipfs/QmWFJQUdw5XGFPHrMjQHquoBTpq1gq6zuByYm73mexmyFA\"]},\"@openzeppelin/contracts/utils/ReentrancyGuard.sol\":{\"keccak256\":\"0xb63221b23818d622bfd83d18e0968307e4fcb7a35536bdceded76e1cf8349acd\",\"urls\":[\"bzz-raw://44e1e8c22362c4708a8c3362735f1465f5b05e2f7315e16c7010d694ce019d73\",\"dweb:/ipfs/QmWj9g8X1hxkXRre2kwkEjLBetjuzmSbWHD81bsSojnBkS\"]}},\"version\":1}",
   "bytecode": "0x",
   "deployedBytecode": "0x",
   "sourceMap": "",
   "deployedSourceMap": "",
   "source": "// https://tornado.cash\n/*\n* d888888P                                           dP              a88888b.                   dP\n*    88                                              88             d8'   `88                   88\n*    88    .d8888b. 88d888b. 88d888b. .d8888b. .d888b88 .d8888b.    88        .d8888b. .d8888b. 88d888b.\n*    88    88'  `88 88'  `88 88'  `88 88'  `88 88'  `88 88'  `88    88        88'  `88 Y8ooooo. 88'  `88\n*    88    88.  .88 88       88    88 88.  .88 88.  .88 88.  .88 dP Y8.   .88 88.  .88       88 88    88\n*    dP    `88888P' dP       dP    dP `88888P8 `88888P8 `88888P' 88  Y88888P' `88888P8 `88888P' dP    dP\n* ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo\n*/\n\npragma solidity 0.5.17;\n\nimport \"./MerkleTreeWithRootHistory.sol\";\nimport \"@openzeppelin/contracts/utils/ReentrancyGuard.sol\";\n\ncontract ISpendVerifier {\n  function verifyProof(bytes memory _proof, uint256[4] memory _input) public returns(bool);\n}\n\ncontract ICommitmentVerifier {\n  function verifyProof(bytes memory _proof, uint256[2] memory _input) public returns(bool);\n}\n\ncontract PrivacyVault is MerkleTreeWithRootHistory, ReentrancyGuard {\n  mapping(bytes32 => bool) public nullifierHashes;\n  // we store all commitments just to prevent accidental deposits with the same commitment\n  mapping(bytes32 => bool) public commitments;\n\n  ISpendVerifier public spendVerifier;\n  ICommitmentVerifier public commitmentVerifier;\n\n  // operator can update snark verification key\n  // after the final trusted setup ceremony operator rights are supposed to be transferred to zero address\n  address public operator;\n  modifier onlyOperator {\n    require(msg.sender == operator, \"Only operator can call this function.\");\n    _;\n  }\n\n  event Deposit(bytes32 indexed commitment, uint32 leafIndex, uint256 timestamp);\n  event Spend(address to, bytes32 nullifierHash, uint256 spendValue);\n\n  constructor(\n\tISpendVerifier _spendVerifier,\n    ICommitmentVerifier _commitmentVerifier,\n    uint32 _merkleTreeHeight,\n    address _operator\n  ) MerkleTreeWithRootHistory(_merkleTreeHeight) public {\n    spendVerifier = _spendVerifier;\n\tcommitmentVerifier = _commitmentVerifier;\n    operator = _operator;\n  }\n\n\n  function deposit(bytes calldata _proof, bytes32 _commitment, uint256 _value) external payable nonReentrant {\n    require(!commitments[_commitment], \"The commitment has been submitted\");\n\n    uint32 insertedIndex = _insert(_commitment);\n    commitments[_commitment] = true;\n    _processDeposit(_value);\n    require(commitmentVerifier.verifyProof(_proof, [uint256(_commitment), _value]), \"Invalid Commitment proof\");\n    emit Deposit(_commitment, insertedIndex, block.timestamp);\n  }\n\n\n  function _deposit(bytes memory _proof, bytes32 _commitment, uint256 _value) internal {\n    require(!commitments[_commitment], \"The commitment has been submitted\");\n\n    uint32 insertedIndex = _insert(_commitment);\n    commitments[_commitment] = true;\n\n    require(commitmentVerifier.verifyProof(_proof, [uint256(_commitment), _value]), \"Invalid Commitment proof\");\n\n    emit Deposit(_commitment, insertedIndex, block.timestamp);\n  }\n\n\n  /** @dev this function is defined in a child contract */\n  function _processDeposit(uint256 _value) internal;\n\n\n  function spend(bytes calldata _proof, bytes calldata _commitmentProof, bytes32 _root, uint _index, uint _spendValue, uint _remainValue, bytes32 _nullifierHash, address payable _recipient, bytes32 _newCommitment) external payable nonReentrant {\n    require(!nullifierHashes[_nullifierHash], \"The note has been already spent\");\n    require(isKnownRoot(_root, _index), \"Cannot find your merkle root\");\n    uint256 total = _spendValue + _remainValue;\n    require(spendVerifier.verifyProof(_proof, [uint(_root), uint(_nullifierHash), total, uint256(_recipient)]), \"Invalid Spend proof\");\n\n    nullifierHashes[_nullifierHash] = true;\n    _processSpend(_recipient, _spendValue);\n    emit Spend(_recipient, _nullifierHash, _spendValue);\n    if (_remainValue > 0) {\n       _deposit(_commitmentProof, _newCommitment, _remainValue);\n    }\n\n  }\n\n  /** @dev this function is defined in a child contract */\n  function _processSpend(address payable _recipient, uint256 _value) internal;\n\n  /** @dev whether a note is already spent */\n  function isSpent(bytes32 _nullifierHash) public view returns(bool) {\n    return nullifierHashes[_nullifierHash];\n  }\n\n  /** @dev whether an array of notes is already spent */\n  function isSpentArray(bytes32[] calldata _nullifierHashes) external view returns(bool[] memory spent) {\n    spent = new bool[](_nullifierHashes.length);\n    for(uint i = 0; i < _nullifierHashes.length; i++) {\n      if (isSpent(_nullifierHashes[i])) {\n        spent[i] = true;\n      }\n    }\n  }\n\n\n  function updateVerifier(address _newSpendVerifier, address _newCommitmentVerifier) external onlyOperator {\n    spendVerifier = ISpendVerifier(_newSpendVerifier);\n\tcommitmentVerifier = ICommitmentVerifier(_newCommitmentVerifier);\n  }\n\n  /** @dev operator can change his address */\n  function changeOperator(address _newOperator) external onlyOperator {\n    operator = _newOperator;\n  }\n}\n",
-  "sourcePath": "/home/zy/hackathon/tornado-core/contracts/PrivacyVault.sol",
+  "sourcePath": "/home/zy/privacy-vault/contracts/PrivacyVault.sol",
   "ast": {
-    "absolutePath": "/home/zy/hackathon/tornado-core/contracts/PrivacyVault.sol",
+    "absolutePath": "/home/zy/privacy-vault/contracts/PrivacyVault.sol",
     "exportedSymbols": {
       "ICommitmentVerifier": [
         1799
@@ -62,7 +62,7 @@
         "src": "755:23:9"
       },
       {
-        "absolutePath": "/home/zy/hackathon/tornado-core/contracts/MerkleTreeWithRootHistory.sol",
+        "absolutePath": "/home/zy/privacy-vault/contracts/MerkleTreeWithRootHistory.sol",
         "file": "./MerkleTreeWithRootHistory.sol",
         "id": 1774,
         "nodeType": "ImportDirective",
@@ -78,7 +78,7 @@
         "id": 1775,
         "nodeType": "ImportDirective",
         "scope": 2176,
-        "sourceUnit": 4205,
+        "sourceUnit": 4203,
         "src": "822:59:9",
         "symbolAliases": [],
         "unitAlias": ""
@@ -412,10 +412,10 @@
               "id": 1802,
               "name": "ReentrancyGuard",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 4204,
+              "referencedDeclaration": 4202,
               "src": "1182:15:9",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_ReentrancyGuard_$4204",
+                "typeIdentifier": "t_contract$_ReentrancyGuard_$4202",
                 "typeString": "contract ReentrancyGuard"
               }
             },
@@ -426,7 +426,7 @@
         ],
         "contractDependencies": [
           1590,
-          4204
+          4202
         ],
         "contractKind": "contract",
         "documentation": null,
@@ -434,7 +434,7 @@
         "id": 2175,
         "linearizedBaseContracts": [
           2175,
-          4204,
+          4202,
           1590
         ],
         "name": "PrivacyVault",
@@ -642,7 +642,7 @@
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 4219,
+                            "referencedDeclaration": 4217,
                             "src": "1699:3:9",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
@@ -718,10 +718,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        4222,
-                        4223
+                        4220,
+                        4221
                       ],
-                      "referencedDeclaration": 4223,
+                      "referencedDeclaration": 4221,
                       "src": "1691:7:9",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -1374,10 +1374,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        4222,
-                        4223
+                        4220,
+                        4221
                       ],
-                      "referencedDeclaration": 4223,
+                      "referencedDeclaration": 4221,
                       "src": "2358:7:9",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -1807,10 +1807,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        4222,
-                        4223
+                        4220,
+                        4221
                       ],
-                      "referencedDeclaration": 4223,
+                      "referencedDeclaration": 4221,
                       "src": "2551:7:9",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -1873,7 +1873,7 @@
                           "name": "block",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 4209,
+                          "referencedDeclaration": 4207,
                           "src": "2705:5:9",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_block",
@@ -1955,7 +1955,7 @@
                   "name": "nonReentrant",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 4203,
+                  "referencedDeclaration": 4201,
                   "src": "2339:12:9",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$__$",
@@ -2165,10 +2165,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        4222,
-                        4223
+                        4220,
+                        4221
                       ],
-                      "referencedDeclaration": 4223,
+                      "referencedDeclaration": 4221,
                       "src": "2822:7:9",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -2544,10 +2544,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        4222,
-                        4223
+                        4220,
+                        4221
                       ],
-                      "referencedDeclaration": 4223,
+                      "referencedDeclaration": 4221,
                       "src": "2987:7:9",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -2610,7 +2610,7 @@
                           "name": "block",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 4209,
+                          "referencedDeclaration": 4207,
                           "src": "3142:5:9",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_block",
@@ -2936,10 +2936,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        4222,
-                        4223
+                        4220,
+                        4221
                       ],
-                      "referencedDeclaration": 4223,
+                      "referencedDeclaration": 4221,
                       "src": "3530:7:9",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -3068,10 +3068,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        4222,
-                        4223
+                        4220,
+                        4221
                       ],
-                      "referencedDeclaration": 4223,
+                      "referencedDeclaration": 4221,
                       "src": "3612:7:9",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -3467,10 +3467,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        4222,
-                        4223
+                        4220,
+                        4221
                       ],
-                      "referencedDeclaration": 4223,
+                      "referencedDeclaration": 4221,
                       "src": "3733:7:9",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -3899,7 +3899,7 @@
                   "name": "nonReentrant",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 4203,
+                  "referencedDeclaration": 4201,
                   "src": "3511:12:9",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$__$",
@@ -5341,7 +5341,7 @@
     "src": "755:4410:9"
   },
   "legacyAST": {
-    "absolutePath": "/home/zy/hackathon/tornado-core/contracts/PrivacyVault.sol",
+    "absolutePath": "/home/zy/privacy-vault/contracts/PrivacyVault.sol",
     "exportedSymbols": {
       "ICommitmentVerifier": [
         1799
@@ -5367,7 +5367,7 @@
         "src": "755:23:9"
       },
       {
-        "absolutePath": "/home/zy/hackathon/tornado-core/contracts/MerkleTreeWithRootHistory.sol",
+        "absolutePath": "/home/zy/privacy-vault/contracts/MerkleTreeWithRootHistory.sol",
         "file": "./MerkleTreeWithRootHistory.sol",
         "id": 1774,
         "nodeType": "ImportDirective",
@@ -5383,7 +5383,7 @@
         "id": 1775,
         "nodeType": "ImportDirective",
         "scope": 2176,
-        "sourceUnit": 4205,
+        "sourceUnit": 4203,
         "src": "822:59:9",
         "symbolAliases": [],
         "unitAlias": ""
@@ -5717,10 +5717,10 @@
               "id": 1802,
               "name": "ReentrancyGuard",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 4204,
+              "referencedDeclaration": 4202,
               "src": "1182:15:9",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_ReentrancyGuard_$4204",
+                "typeIdentifier": "t_contract$_ReentrancyGuard_$4202",
                 "typeString": "contract ReentrancyGuard"
               }
             },
@@ -5731,7 +5731,7 @@
         ],
         "contractDependencies": [
           1590,
-          4204
+          4202
         ],
         "contractKind": "contract",
         "documentation": null,
@@ -5739,7 +5739,7 @@
         "id": 2175,
         "linearizedBaseContracts": [
           2175,
-          4204,
+          4202,
           1590
         ],
         "name": "PrivacyVault",
@@ -5947,7 +5947,7 @@
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 4219,
+                            "referencedDeclaration": 4217,
                             "src": "1699:3:9",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
@@ -6023,10 +6023,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        4222,
-                        4223
+                        4220,
+                        4221
                       ],
-                      "referencedDeclaration": 4223,
+                      "referencedDeclaration": 4221,
                       "src": "1691:7:9",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -6679,10 +6679,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        4222,
-                        4223
+                        4220,
+                        4221
                       ],
-                      "referencedDeclaration": 4223,
+                      "referencedDeclaration": 4221,
                       "src": "2358:7:9",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -7112,10 +7112,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        4222,
-                        4223
+                        4220,
+                        4221
                       ],
-                      "referencedDeclaration": 4223,
+                      "referencedDeclaration": 4221,
                       "src": "2551:7:9",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -7178,7 +7178,7 @@
                           "name": "block",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 4209,
+                          "referencedDeclaration": 4207,
                           "src": "2705:5:9",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_block",
@@ -7260,7 +7260,7 @@
                   "name": "nonReentrant",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 4203,
+                  "referencedDeclaration": 4201,
                   "src": "2339:12:9",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$__$",
@@ -7470,10 +7470,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        4222,
-                        4223
+                        4220,
+                        4221
                       ],
-                      "referencedDeclaration": 4223,
+                      "referencedDeclaration": 4221,
                       "src": "2822:7:9",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -7849,10 +7849,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        4222,
-                        4223
+                        4220,
+                        4221
                       ],
-                      "referencedDeclaration": 4223,
+                      "referencedDeclaration": 4221,
                       "src": "2987:7:9",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -7915,7 +7915,7 @@
                           "name": "block",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 4209,
+                          "referencedDeclaration": 4207,
                           "src": "3142:5:9",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_block",
@@ -8241,10 +8241,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        4222,
-                        4223
+                        4220,
+                        4221
                       ],
-                      "referencedDeclaration": 4223,
+                      "referencedDeclaration": 4221,
                       "src": "3530:7:9",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -8373,10 +8373,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        4222,
-                        4223
+                        4220,
+                        4221
                       ],
-                      "referencedDeclaration": 4223,
+                      "referencedDeclaration": 4221,
                       "src": "3612:7:9",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -8772,10 +8772,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        4222,
-                        4223
+                        4220,
+                        4221
                       ],
-                      "referencedDeclaration": 4223,
+                      "referencedDeclaration": 4221,
                       "src": "3733:7:9",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -9204,7 +9204,7 @@
                   "name": "nonReentrant",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 4203,
+                  "referencedDeclaration": 4201,
                   "src": "3511:12:9",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$__$",
@@ -10650,8 +10650,8 @@
     "version": "0.5.17+commit.d19bba13.Emscripten.clang"
   },
   "networks": {},
-  "schemaVersion": "3.0.18",
-  "updatedAt": "2020-06-29T02:58:09.442Z",
+  "schemaVersion": "3.2.0",
+  "updatedAt": "2020-06-29T09:48:59.477Z",
   "devdoc": {
     "methods": {}
   },

@@ -7,15 +7,15 @@
       "type": "fallback"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.17+commit.d19bba13\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"fallback\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/home/zy/hackathon/tornado-core/contracts/Mocks/BadRecipient.sol\":\"BadRecipient\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/zy/hackathon/tornado-core/contracts/Mocks/BadRecipient.sol\":{\"keccak256\":\"0x0329be02a9fec6e4fbd93d8c98887acd5d46bb09af18298232fc2fe72838ca03\",\"urls\":[\"bzz-raw://c4670e578c58b2326efebcba1a2dd2ee0bf6d70c26f84cdaa3e81f67bd0e360d\",\"dweb:/ipfs/QmbVoxKmmrWzjdnLfJkxhWe6UyjrpCFYjMxRP6uRCfGi7r\"]}},\"version\":1}",
-  "bytecode": "0x6080604052348015600f57600080fd5b50609c80601d6000396000f3fe6080604052348015600f57600080fd5b5060405162461bcd60e51b815260040180806020018281038252602181526020018060476021913960400191505060405180910390fdfe7468697320636f6e747261637420646f6573206e6f742061636365707420455448a265627a7a7231582067e75e1cee76d313a9a1b4f3e7e317017a4f742ee3176483306a191d0702ebf964736f6c63430005110032",
-  "deployedBytecode": "0x6080604052348015600f57600080fd5b5060405162461bcd60e51b815260040180806020018281038252602181526020018060476021913960400191505060405180910390fdfe7468697320636f6e747261637420646f6573206e6f742061636365707420455448a265627a7a7231582067e75e1cee76d313a9a1b4f3e7e317017a4f742ee3176483306a191d0702ebf964736f6c63430005110032",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.17+commit.d19bba13\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"fallback\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/home/zy/privacy-vault/contracts/Mocks/BadRecipient.sol\":\"BadRecipient\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/zy/privacy-vault/contracts/Mocks/BadRecipient.sol\":{\"keccak256\":\"0x0329be02a9fec6e4fbd93d8c98887acd5d46bb09af18298232fc2fe72838ca03\",\"urls\":[\"bzz-raw://c4670e578c58b2326efebcba1a2dd2ee0bf6d70c26f84cdaa3e81f67bd0e360d\",\"dweb:/ipfs/QmbVoxKmmrWzjdnLfJkxhWe6UyjrpCFYjMxRP6uRCfGi7r\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50609c80601d6000396000f3fe6080604052348015600f57600080fd5b5060405162461bcd60e51b815260040180806020018281038252602181526020018060476021913960400191505060405180910390fdfe7468697320636f6e747261637420646f6573206e6f742061636365707420455448a265627a7a72315820f889c10cbf51a0ccbedd65dee30020ea428ec0cd91b054623769ce3a607f405a64736f6c63430005110032",
+  "deployedBytecode": "0x6080604052348015600f57600080fd5b5060405162461bcd60e51b815260040180806020018281038252602181526020018060476021913960400191505060405180910390fdfe7468697320636f6e747261637420646f6573206e6f742061636365707420455448a265627a7a72315820f889c10cbf51a0ccbedd65dee30020ea428ec0cd91b054623769ce3a607f405a64736f6c63430005110032",
   "sourceMap": "25:110:5:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;25:110:5;;;;;;;",
   "deployedSourceMap": "25:110:5:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;-1:-1;77:51:5;;-1:-1:-1;;;77:51:5;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
   "source": "pragma solidity ^0.5.0;\n\ncontract BadRecipient {\n  function() external {\n    require(false, \"this contract does not accept ETH\");\n  }\n}\n",
-  "sourcePath": "/home/zy/hackathon/tornado-core/contracts/Mocks/BadRecipient.sol",
+  "sourcePath": "/home/zy/privacy-vault/contracts/Mocks/BadRecipient.sol",
   "ast": {
-    "absolutePath": "/home/zy/hackathon/tornado-core/contracts/Mocks/BadRecipient.sol",
+    "absolutePath": "/home/zy/privacy-vault/contracts/Mocks/BadRecipient.sol",
     "exportedSymbols": {
       "BadRecipient": [
         1659
@@ -110,10 +110,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        4222,
-                        4223
+                        4220,
+                        4221
                       ],
-                      "referencedDeclaration": 4223,
+                      "referencedDeclaration": 4221,
                       "src": "77:7:5",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -173,7 +173,7 @@
     "src": "0:136:5"
   },
   "legacyAST": {
-    "absolutePath": "/home/zy/hackathon/tornado-core/contracts/Mocks/BadRecipient.sol",
+    "absolutePath": "/home/zy/privacy-vault/contracts/Mocks/BadRecipient.sol",
     "exportedSymbols": {
       "BadRecipient": [
         1659
@@ -268,10 +268,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        4222,
-                        4223
+                        4220,
+                        4221
                       ],
-                      "referencedDeclaration": 4223,
+                      "referencedDeclaration": 4221,
                       "src": "77:7:5",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -335,8 +335,8 @@
     "version": "0.5.17+commit.d19bba13.Emscripten.clang"
   },
   "networks": {},
-  "schemaVersion": "3.0.18",
-  "updatedAt": "2020-06-29T02:58:09.439Z",
+  "schemaVersion": "3.2.0",
+  "updatedAt": "2020-06-29T09:48:59.474Z",
   "devdoc": {
     "methods": {}
   },

@@ -8,9 +8,7 @@ Privacy Vault is a non-custodial Ethereum and ERC20 privacy solution based on zk
 
 ## Usage
 
-You can see example usage in cli.js, it works both in console and in browser.
-
-Use with command line version. Works for Kovan:
+You can see example usage in cli.js, works for Kovan:
 ### Initialization
 1. `npm install`
 1. `cp .env.example .env` - add your Kovan private key to deploy contracts and make deposit and spend operation
@@ -22,7 +20,7 @@ Use with command line version. Works for Kovan:
 
 
 ### Kovan
-1. you can make operation after run `npm install` because current repository contain deployed privacy vault contracts or you can deploy your contracts by complete steps from Initialization
+1. you can make operation after run `npm install` because current repository contain configration information of deployed privacy vault contracts or you can deploy your contracts by complete steps from Initialization
 1. Add `PRIVATE_KEY` to `.env` file
 1. `./cli.js --help`
 

@@ -34,11 +34,11 @@
     "42": {
       "events": {},
       "links": {},
-      "address": "0x61F4D1CCae897E7205A60E90C77d1EDAf655c7CF",
-      "transactionHash": "0xb3148954256ecea45c74ef3f89ee38b04119d1fa0f0cc40387a4cb1b89b815e0"
+      "address": "0x852ec20034E700323a226Ff179725C8B67Cdff8C",
+      "transactionHash": "0x59fb13ccc163549485c49217461f8fb84796c4508e26b68f33421ae862d31bff"
     }
   },
-  "schemaVersion": "3.0.18",
-  "updatedAt": "2020-06-29T06:38:11.150Z",
+  "schemaVersion": "3.2.0",
+  "updatedAt": "2020-06-29T10:24:21.007Z",
   "networkType": "ethereum"
 }

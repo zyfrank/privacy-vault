@@ -41,12 +41,12 @@ module.exports = {
     },
     netId42: {
       eth: {
-        instanceAddress: '0x4c3818d3503081d6649ebb9602dF5680ee9Aea69',
+        instanceAddress: '0x754e47147A4FAE96bC0FaD6663a3203Dca8Ccbf9',
         symbol: 'ETH',
         decimals: 18
       },
       dai: {
-        instanceAddress: '0x7bEc55DBBe3d5648dE3dcf6D209FbEF44dF44c4d',
+        instanceAddress: '0xFe7cfc57147C1f58C88A303068d2f7FC828182a6',
         tokenAddress: '0x4F96Fe3b7A6Cf9725f59d353F723c1bDb64CA6Aa',
         symbol: 'DAI',
         decimals: 18
